@@ -1,0 +1,28 @@
+{
+  "name": "livefitwithlisa",
+  "version": "1.0.0",
+  "description": "Main script folder",
+  "main": "server/server.js",
+  "dependencies": {
+    "concurrently": "^7.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syackzan/livefitwithlisa.git"
+  },
+  "author": "syackzan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syackzan/livefitwithlisa/issues"
+  },
+  "homepage": "https://github.com/syackzan/livefitwithlisa#readme"
+}
